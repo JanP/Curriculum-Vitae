@@ -1,0 +1,5 @@
+My CV is distributed as a pdf, generated from Latex.
+
+To build CV, issue the following command:
+
+	make

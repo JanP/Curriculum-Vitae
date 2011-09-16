@@ -1,0 +1,270 @@
+\documentclass[12pt,oneside]{article}
+
+\usepackage{geometry}
+\usepackage[T1]{fontenc}
+
+%\pagestyle{empty}
+\geometry{a4paper,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headheight=0in,headsep=0in,footskip=.3in}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+\newcommand{\name}{Jan Paesmans}
+\newcommand{\street}{Kapelstraat}
+\newcommand{\houseno}{38}
+\newcommand{\postalcode}{3212}
+\newcommand{\city}{Pellenberg}
+\newcommand{\country}{Belgium}
+\newcommand{\phone}{0494/418996}
+\newcommand{\email}{jan.paesmans@gmail.com}
+\newcommand{\birthday}{13/08/1978}
+
+\newcommand{\bigname}[1]{
+	\begin{center}\selectfont\Huge\scshape#1\end{center}
+}
+
+\newenvironment{ressection}[1]{
+	\vspace{5pt}
+	{\selectfont\Large#1}
+	\begin{itemize}
+	\vspace{5pt}
+}{
+	\end{itemize}
+}
+
+\newcommand{\ambition}[1]{
+	\vspace{5pt}
+	{\selectfont\Large Ambition}
+	\vspace{5pt}
+	\begin{flushleft} #1 \end{flushleft}
+	\vspace{5pt}
+}
+
+\newenvironment{hobbies}{
+	\vspace{5pt}
+	{\selectfont\Large Hobbies}
+	\vspace{5pt}
+	\begin{flushleft}
+}{
+	\end{flushleft}
+	\vspace{5pt}
+}
+
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\ressubitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\resbigitem}[4]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}\hfill#4 \\
+	\textit{#2}\hfill#3
+}
+
+\newenvironment{ressubsec}[4]{
+	\resbigitem{#1}{#2}{#3}{#4}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+\newcommand{\langhdr}{
+& Reading & Writing & Speaking \\
+}
+
+\newcommand{\lang}[4]{
+#1 & #2 & #3 & #4 \\
+}
+
+\newenvironment{languages}{
+	\vspace{5pt}
+	{\selectfont\Large Languages} \\
+	\begin{center}
+	\begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}}cccc}
+	\langhdr
+	\hline
+}{
+	\end{tabular*}
+	\end{center}
+	\vspace{5pt}
+}
+
+\newenvironment{ressubsubsec}[4]{
+	\vspace{5pt}
+	\resbigitem{#1}{#2}{#3}{#4}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+\newcommand{\ressubsubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\lfoot{\begin{center}\arabic{page}\end{center}}
+
+\fontfamily{ppl} \selectfont
+
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{1pt}
+
+\vspace{-1pt} {\itshape \street \houseno \hfill \phone} \\
+\vspace{-1pt} {\itshape \postalcode \city, \country \hfill \email} \\
+\vspace{-1pt} {\itshape \hfill Date of birth: \birthday} \\
+
+\vspace{8pt}
+
+%\begin{ressection}{Ambition}
+\ambition{
+I seek a position that continuously challenges my skills as a
+developer while working on the latest and most advanced products. Enabling
+me to study and explore new ideas while at the same time designing and
+implementing new high-tech products.}
+%\end{ressection}
+
+%% Skills %%
+\begin{ressection}{Skills}
+	\resitem{\textbf{Operating Systems:} Linux (Gentoo, Debian, Ubuntu, Red Hat)}
+	\resitem{\textbf{Programming Languages:} C, C++, python, VHDL, Verilog, SystemVerilog, Java, \LaTeX, shell scripting, PHP, SQL}
+	\resitem{\textbf{Methodologies:} VMM for Verilog, Security, Embedded software development, SCRUM, Agile Development}
+	\resitem{\textbf{Embedded OSes:} Linux, Ecos, RTEMS, FreeRTOS}
+	\resitem{\textbf{Networking stacks:} Linux (TCP/IP, wireless), uIP, lwIP}
+	\resitem{\textbf{EDA Tools:} Mentor Graphics Modelsim, Synopsys Design Compiler, Synplicity Synplify, Mentor Graphics Seamless, Mentor Graphics Expedition PCB, Xilinx ISE}
+	\resitem{\textbf{Toolchains:} GNU Toolchain (gcc, libc, uclibc, dietlibc, newlib, \dots)}
+	\resitem{\textbf{Cryptography:} Functions (e.g. RSA, DES, 3DES, HMAC, SHA1, MD5), Algorithms/Protocols (e.g. SSL), Secure Storage}
+	\resitem{\textbf{Networking:} Wireless (IEEE 802.11)}
+	\resitem{\textbf{Versioning Systems:} CVS, Subversion, GIT, Clearcase, Darcs}
+	\resitem{\textbf{Databases:} Postgres}
+\end{ressection}
+
+%% Experience %%
+\begin{ressection}{Experiences}
+	\begin{ressubsec}{Senior Embedded Linux Development Engineer/OS System Architect}{Prodata Mobility N.V.}{Zaventem, Belgium}{01/2010--present}
+		\ressubsubitem{Embedded Linux kernel development, OpenEmbedded}
+		\ressubsubitem{Real-Time development}
+		\ressubsubitem{Hardware Selection, Product Design, PCB Schematics}
+		\ressubsubitem{Atmel AT91, STM32, Intel Atom, ARM Cortex A9}
+	\end{ressubsec}
+	\begin{ressubsec}{Consultant, Senior SOC System Architect}{Essensium/Mind}{Leuven, Belgium}{02/2008--12/2009}
+		\ressubitem{Verilog/SystemVerilog development and testing}
+		\ressubitem{CPU integration, BSP, HAL, low-level embedded}
+		\ressubitem{C++ server programming, Postgresql Database development}
+		\ressubitem{C, embedded, FreeRTOS, uIP and lwIP}
+		\begin{ressubsubsec}{Consultant, Senior Development Engineer}{SoftAtHome}{Leuven, Belgium}{04/2008--12/2008}
+			\ressubsubitem{Embedded Linux software development}
+			\ressubsubitem{Development of embedded software related to networking, specifically WLAN}
+			\ressubsubitem{C and C++ as programming languages}
+			\ressubsubitem{Perforce for version control}
+		\end{ressubsubsec}
+		\begin{ressubsubsec}{Consultant, Senior Development Engineer}{FMTC}{Leuven, Belgium}{10/2009--12/2009}
+			\ressubsubitem{Embedded Real-Time Linux development}
+			\ressubsubitem{Development of embedded real-time control logic for a badminton demonstration robot}
+			\ressubsubitem{C++ as programming language, Xenomai for Linux real-time}
+			\ressubsubitem{GIT for version control}
+		\end{ressubsubsec}
+	\end{ressubsec}
+	\begin{ressubsec}{Consultant, Senior Development Engineer}{TASS Belgium N.V.}{Leuven, Belgium}{01/2004--02/2008}
+		\begin{ressubsubsec}{Consultant in Embedded Software}{Thomson Multimedia}{Edegem, Belgium}{01/2007--02/2008}
+			\ressubsubitem{Embedded Linux/RTEMS software development}
+			\ressubsubitem{Development of embedded software related to networking, specifically WLAN}
+			\ressubsubitem{C and C++ as programming languages}
+			\ressubsubitem{Clearcase for version control}
+		\end{ressubsubsec}
+		\begin{ressubsubsec}{Consultant in Hardware Design}{Banksys}{Evere, Belgium}{08/2006--12/2006}
+			\ressubsubitem{Investigate and improve the design of a secure crypto unit}
+			\ressubsubitem{C and VHDL as programming languages}
+			\ressubsubitem{Mentor Graphics Expedition PCB for designing a board layout}
+			\ressubsubitem{Xilinx ISE WebPACK for development on a CPLD}
+			\ressubsubitem{CVS for version control}
+		\end{ressubsubsec}
+		\begin{ressubsubsec}{Consultant in Embedded Software}{Banksys}{Evere, Belgium}{01/2004--12/2006}
+			\ressubsubitem{Embedded Linux/Ecos software development}
+			\ressubsubitem{C, shell scripting and python as programming languages}
+			\ressubsubitem{Developing Linux device drivers}
+			\ressubsubitem{Designing cryptographic services}
+			\ressubsubitem{CVS for version control}
+		\end{ressubsubsec}
+	\end{ressubsec}
+	\begin{ressubsec}{Software Development Engineer}{SADL}{Leuven, Belgium}{05/2003--12/2003}
+		\ressubitem{9 month project for the creation of the geographical database for the GETIS project}
+		\ressubitem{Visual Basic and Java as programming languages}
+		\ressubitem{Oracle database}
+		\ressubitem{CVS for version control}
+	\end{ressubsec}
+	\begin{ressubsec}{Hardware Development Engineer}{Easics N.V.}{Leuven, Belgium}{08/2001--05/2003}
+		\ressubitem{Design and development of a multicore network processor architecture for bandwidth up to 10Gb/s}
+		\ressubitem{Design and development of a SDH/Sonet to ATM mapper}
+		\ressubitem{VHDL, C and C++ as programming languages and \LaTeX for documentation}
+		\ressubitem{EDA Tools for simulation and synthesis}
+		\ressubitem{CVS for version control}
+	\end{ressubsec}
+\end{ressection}
+
+%% Education %%
+\begin{ressection}{Education}
+	\begin{ressubsec}{Master in Industrial Engineering}{Hogeschool GroepT}{Leuven, Belgium}{1997--2001}
+		\ressubitem{Majoring in electronics, specialization ICT}
+	\end{ressubsec}
+\end{ressection}
+
+\begin{ressection}{Additional Education}
+	\begin{ressubsec}{Compiler Design}{University Of Delaware}{Delaware, USA}{2001}
+		\ressubitem{Compiler design course given by Prof. Gao}
+		\ressubitem{Duration: 2 months}
+	\end{ressubsec}
+	\begin{ressubsec}{VHDL}{Esperan}{Cambridge, UK}{2001}
+		\ressubitem{Perfecting VHDL skills}
+		\ressubitem{Duration: 5 days}
+	\end{ressubsec}
+	\begin{ressubsec}{Linux Device Drivers \& Linux Kernel Internals}{Red Hat}{Leuven, Belgium}{2004}
+		\ressubitem{Perfecting Linux kernel development skills}
+		\ressubitem{Duration: 5 days}
+	\end{ressubsec}
+	\begin{ressubsec}{SystemC}{Doulos}{Einhoven, The Netherlands}{2005}
+		\ressubitem{Learning SystemC}
+		\ressubitem{Duration: 5 days}
+	\end{ressubsec}
+\end{ressection}
+
+%% Languages %%
+\begin{languages}
+\lang{Dutch}{native}{native}{native}
+\lang{English}{very good}{very good}{very good}
+\lang{French}{very good}{good}{very good}
+\lang{German}{notions}{notions}{notions}
+\end{languages}
+
+%% Hobbies %%
+\begin{hobbies}
+My hobbies include Linux, hardware tinkering, motorcycle riding, swimming,
+bicycle riding, reading and cooking.
+\end{hobbies}
+
+\end{document}
