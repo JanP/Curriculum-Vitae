@@ -99,6 +99,7 @@
 
 \newenvironment{languages}{
 	\vspace{5pt}
+	\begin{minipage}{\textwidth}
 	{\selectfont\Large Languages} \\
 	\begin{center}
 	\begin{tabular*}{0.75\textwidth}{@{\extracolsep{\fill}}cccc}
@@ -107,6 +108,7 @@
 }{
 	\end{tabular*}
 	\end{center}
+	\end{minipage}
 	\vspace{5pt}
 }
 
@@ -145,28 +147,35 @@
 \ambition{
 I seek a position that continuously challenges my skills as a
 developer while working on the latest and most advanced products. Enabling
-me to study and explore new ideas while at the same time designing and
-implementing new high-tech products.}
+me to study and explore new ideas while at the same time leading a team in 
+designing and implementing new high-tech products.}
 %\end{ressection}
 
 %% Skills %%
 \begin{ressection}{Skills}
 	\resitem{\textbf{Operating Systems:} Linux (Gentoo, Debian, Ubuntu, Red Hat)}
 	\resitem{\textbf{Programming Languages:} C, C++, python, VHDL, Verilog, SystemVerilog, Java, \LaTeX, shell scripting, PHP, SQL}
-	\resitem{\textbf{Methodologies:} VMM for Verilog, Security, Embedded software development, SCRUM, Agile Development}
+	\resitem{\textbf{Methodologies:} VMM for SystemVerilog, Security, Embedded software development, SCRUM, Agile Development}
 	\resitem{\textbf{Embedded OSes:} Linux, Ecos, RTEMS, FreeRTOS}
 	\resitem{\textbf{Networking stacks:} Linux (TCP/IP, wireless), uIP, lwIP}
-	\resitem{\textbf{EDA Tools:} Mentor Graphics Modelsim, Synopsys Design Compiler, Synplicity Synplify, Mentor Graphics Seamless, Mentor Graphics Expedition PCB, Xilinx ISE}
-	\resitem{\textbf{Toolchains:} GNU Toolchain (gcc, libc, uclibc, dietlibc, newlib, \dots)}
+	\resitem{\textbf{EDA Tools:} Mentor Graphics Modelsim, Synopsys VCS, Synopsys Design Compiler, Mentor Graphics Seamless, Mentor Graphics Expedition PCB, Xilinx ISE}
+	\resitem{\textbf{Toolchains:} GNU Toolchain (gcc, libc, uclibc, dietlibc, newlib, \dots), LLVM/CLang}
 	\resitem{\textbf{Cryptography:} Functions (e.g. RSA, DES, 3DES, HMAC, SHA1, MD5), Algorithms/Protocols (e.g. SSL), Secure Storage}
 	\resitem{\textbf{Networking:} Wireless (IEEE 802.11)}
-	\resitem{\textbf{Versioning Systems:} CVS, Subversion, GIT, Clearcase, Darcs}
+	\resitem{\textbf{Versioning Systems:} CVS, Subversion, GIT, Clearcase}
 	\resitem{\textbf{Databases:} Postgres}
 \end{ressection}
 
 %% Experience %%
 \begin{ressection}{Experiences}
-	\begin{ressubsec}{Senior Embedded Linux Development Engineer/OS System Architect}{Prodata Mobility N.V.}{Zaventem, Belgium}{01/2010--present}
+	\begin{ressubsec}{Senior Consultant}{Verotech}{Haasrode, Belgium}{09/2012--present}
+		\begin{ressubsubsec}{Senior Consultant/Team Coach}{Atos Worldline}{Evere, Belgium}{09/2012--present}
+			\ressubsubitem{Embedded Linux/Ecos software development}
+			\ressubsubitem{Power Management, Battery Management, Software Architecture, Unittesting}
+			\ressubsubitem{Linux device drivers}
+		\end{ressubsubsec}
+	\end{ressubsec}
+	\begin{ressubsec}{Senior Embedded Linux Developer/OS System Architect}{Prodata Mobility N.V.}{Zaventem, Belgium}{01/2010--09/2012}
 		\ressubsubitem{Embedded Linux kernel development, OpenEmbedded}
 		\ressubsubitem{Real-Time development}
 		\ressubsubitem{Hardware Selection, Product Design, PCB Schematics}
@@ -179,7 +188,7 @@ implementing new high-tech products.}
 		\ressubitem{C, embedded, FreeRTOS, uIP and lwIP}
 		\begin{ressubsubsec}{Consultant, Senior Development Engineer}{SoftAtHome}{Leuven, Belgium}{04/2008--12/2008}
 			\ressubsubitem{Embedded Linux software development}
-			\ressubsubitem{Development of embedded software related to networking, specifically WLAN}
+			\ressubsubitem{Development of embedded software related to networking, specifically Wifi}
 			\ressubsubitem{C and C++ as programming languages}
 			\ressubsubitem{Perforce for version control}
 		\end{ressubsubsec}
@@ -263,8 +272,8 @@ implementing new high-tech products.}
 
 %% Hobbies %%
 \begin{hobbies}
-My hobbies include Linux, hardware tinkering, motorcycle riding, swimming,
-bicycle riding, reading and cooking.
+My hobbies include Linux, Riddle Of Steel, hardware tinkering,
+motorcycle riding, swimming, bicycle riding, reading and cooking.
 \end{hobbies}
 
 \end{document}
